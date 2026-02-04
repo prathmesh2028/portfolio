@@ -4,10 +4,12 @@ A modern, responsive personal portfolio website built with clean HTML, CSS, and 
 
 ## 🚀 Features
 
-- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop.
-- **Dark/Light Mode**: Theme toggle with preference persistence using `localStorage`.
-- **Smooth Animations**: Intersection Observer used for fade-in scroll animations.
-- **Glassmorphism UI**: Modern aesthetic with subtle glass effects.
+- **Responsive Design**: Mobile-first approach with fluid typography and touch-optimized interactions.
+- **Premium UI/UX**: Glassmorphism design, advanced gradients, and 3D button effects.
+- **WhatsApp Integration**: Direct message sending via WhatsApp from the contact form.
+- **Dark/Light Mode**: Theme toggle with preference persistence.
+- **Smooth Animations**: Scroll-triggered animations, parallax effects, and micro-interactions.
+- **Glassmorphism UI**: Modern aesthetic with backdrop blur and gradient borders.
 
 ## 🛠️ Technologies Used
 

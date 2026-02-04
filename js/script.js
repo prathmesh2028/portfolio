@@ -139,3 +139,112 @@ document.querySelectorAll('.btn, .btn-link').forEach(button => {
         }, 100);
     }, { passive: true });
 });
+
+// ============================================
+// WhatsApp Contact Form Integration
+// ============================================
+// CONFIGURATION: Update this number with your WhatsApp number 
+// Format: Country code + number (no spaces, no + sign)
+// Example for India: '919876543210'
+// Example for US: '11234567890'
+const WHATSAPP_NUMBER = '91930944157'; // UPDATE THIS WITH YOUR NUMBER
+
+// Handle contact form submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate form
+        if (!name || !email || !message) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Format message for WhatsApp
+        const whatsappMessage = `*New Portfolio Contact Message*\n\n` +
+            `*Name:* ${name}\n` +
+            `*Email:* ${email}\n\n` +
+            `*Message:*\n${message}\n\n` +
+            `---\nSent from Portfolio Contact Form`;
+
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        // Create WhatsApp URL (works on mobile and desktop)
+        const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
+
+        // Optional: Clear form after sending
+        setTimeout(() => {
+            contactForm.reset();
+        }, 500);
+
+        // Show success message
+        showNotification('Opening WhatsApp... Please send the message to complete!');
+    });
+}
+
+// Simple notification function
+function showNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: linear-gradient(135deg, #10B981, #06B6D4);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        z-index: 10000;
+        font-weight: 500;
+        animation: slideIn 0.3s ease-out;
+    `;
+
+    // Add animation
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // Add to page
+    document.body.appendChild(notification);
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 4000);
+}

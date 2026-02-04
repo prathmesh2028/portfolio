@@ -316,7 +316,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Demo)');">
+                    <form class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" placeholder="Your Name" required>
@@ -329,7 +329,9 @@
                             <label for="message">Message</label>
                             <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
