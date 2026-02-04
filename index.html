@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathmesh | IT Engineering Student</title>
+    <meta name="description"
+        content="Portfolio of Prathmesh, an IT Engineering Student and Tech Enthusiast passionate about C++, Java, and Web Development.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo">Prathmesh<span>...</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Prathmesh</h1>
+                    <h2 class="hero-title">IT Engineering Student <span class="separator">|</span> Developer</h2>
+                    <p class="hero-tagline">Building scalable solutions with clean code and creative thinking.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Abstract geometric shape or illustration could go here -->
+                    <div class="blob-cont">
+                        <div class="blob blob-1"></div>
+                        <div class="blob blob-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am currently an IT Engineering student with a strong passion for technology and
+                            problem-solving.
+                            My journey in the tech world involves deep diving into core computer science concepts and
+                            applying them to build real-world applications.
+                        </p>
+                        <p>
+                            I specialize in languages like <strong>C++, Java, and JavaScript</strong>, and I enjoy
+                            exploring modern frameworks.
+                            Recently, I've been focusing on <strong>AI agents, Firebase-based web apps, and System
+                                Design</strong>.
+                        </p>
+                        <p>
+                            When I'm not coding, I am actively involved in building tech communities on campus and
+                            participating in hackathons.
+                        </p>
+                    </div>
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-code"></i>
+                            <h3>clean code</h3>
+                            <p>practice</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>System</h3>
+                            <p>Design</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Creative</h3>
+                            <p>Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">My Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> Programming</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-globe"></i> Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">React (Basic)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-brain"></i> Core Concepts</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">DBMS</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>Firebase Web App</h3>
+                            <p class="project-desc">A scalable web application leveraging Firebase for real-time
+                                authentication and database management.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Firebase</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                            <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3>OpenGL Animation</h3>
+                            <p class="project-desc">A graphical simulation project built using C++ and OpenGL,
+                                demonstrating complex 2D/3D transformations.</p>
+                            <div class="project-tags">
+                                <span>C++</span>
+                                <span>OpenGL</span>
+                                <span>Graphics</span>
+                            </div>
+                            <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI Agent Solution</h3>
+                            <p class="project-desc">Hackathon winning project featuring an Agentic AI solution for
+                                automating complex workflows.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>AI/LLM</span>
+                                <span>API</span>
+                            </div>
+                            <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Experience & Achievements</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Present</span>
+                            <h3>Campus Community Lead</h3>
+                            <p class="timeline-role">Tech Community Builder</p>
+                            <p>Leading technical workshops and fostering a coding culture among students. Organizing
+                                peer-to-peer learning sessions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <h3>Hackathon Participant</h3>
+                            <p class="timeline-role">Team Lead</p>
+                            <p>Participated in multiple national-level hackathons. Developed innovative solutions in
+                                strict timelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of
+                            your visions.</p>
+
+                        <div class="contact-links">
+                            <a href="mailto:badheprathmesh2028@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>badheprathmesh2028@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/prathmeshbadhe/" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                            <a href="https://github.com/prathmesh2028" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Profile</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Demo)');">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Prathmesh. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/prathmesh2028"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/prathmeshbadhe/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:badheprathmesh2028@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
