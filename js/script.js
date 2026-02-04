@@ -32,17 +32,50 @@ function updateIcon(theme) {
 // Mobile Menu Functionality
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
+const body = document.body;
 
-hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    // Animate hamburger bars to X shape (optional, simple toggle for now)
+// Toggle mobile menu with hamburger animation
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMobileMenu();
 });
+
+function toggleMobileMenu() {
+    const isActive = mobileMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+
+    // Animate hamburger to X
+    const bars = hamburger.querySelectorAll('.bar');
+    if (isActive) {
+        bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        // Prevent body scroll when menu is open
+        body.style.overflow = 'hidden';
+    } else {
+        bars[0].style.transform = 'none';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = 'none';
+        body.style.overflow = '';
+    }
+}
 
 // Close mobile menu when a link is clicked
 document.querySelectorAll('.mobile-nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
+        if (mobileMenu.classList.contains('active')) {
+            toggleMobileMenu();
+        }
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+        toggleMobileMenu();
+    }
 });
 
 // Scroll Animations (Intersection Observer)
@@ -77,3 +110,32 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Fix for mobile viewport height issues (100vh problem on mobile browsers)
+function setViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set on load
+setViewportHeight();
+
+// Update on resize (with debounce for performance)
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setViewportHeight, 100);
+}, { passive: true });
+
+// Prevent default touch behavior on buttons for better mobile UX
+document.querySelectorAll('.btn, .btn-link').forEach(button => {
+    button.addEventListener('touchstart', function () {
+        this.style.transform = 'scale(0.96)';
+    }, { passive: true });
+
+    button.addEventListener('touchend', function () {
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 100);
+    }, { passive: true });
+});
