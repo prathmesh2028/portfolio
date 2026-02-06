@@ -785,7 +785,7 @@ ul {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     justify-content: center;
 }
@@ -865,7 +865,7 @@ ul {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 2rem;
     justify-content: center;
 }
@@ -1304,9 +1304,15 @@ ul {
     /* Mobile menu improvements */
     .mobile-menu {
         top: 60px;
-        background: var(--bg-body);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
-        box-shadow: var(--shadow-lg);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: var(--shadow-xl);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .mobile-menu {
+        background: rgba(2, 6, 23, 0.95);
     }
 
     .mobile-nav-links {
@@ -1343,7 +1349,8 @@ ul {
     }
 
     .hero-visual {
-        height: 250px;
+        height: 280px;
+        margin-top: 2rem;
     }
 
     .blob-1 {
@@ -1563,7 +1570,7 @@ ul {
     }
 
     .timeline-dot {
-        left: 6px;
+        left: 7.5px;
         width: 18px;
         height: 18px;
     }
@@ -1602,6 +1609,23 @@ ul {
 
     .logo {
         font-size: 1.35rem;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 350px) {
+
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons .btn {
+        min-width: 100%;
+    }
+
+    .hero-name {
+        font-size: 1.65rem;
     }
 }
 
