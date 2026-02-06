@@ -147,7 +147,7 @@ document.querySelectorAll('.btn, .btn-link').forEach(button => {
 // Format: Country code + number (no spaces, no + sign)
 // Example for India: '919876543210'
 // Example for US: '11234567890'
-const WHATSAPP_NUMBER = '91930944157'; // UPDATE THIS WITH YOUR NUMBER
+const WHATSAPP_NUMBER = '919309445157'; // UPDATE THIS WITH YOUR NUMBER
 
 // Handle contact form submission
 const contactForm = document.querySelector('.contact-form');
